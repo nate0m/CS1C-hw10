@@ -1,0 +1,191 @@
+Script started on 2023-03-30 09:40:26-07:00 [TERM="st-256color" TTY="/dev/pts/0" COLUMNS="115" LINES="24"]
+[1m[7m%[27m[1m[0m                                                                                                                   ]2;nate@archCrafty:~/Documents/school/cs1c/hw10/src]1;..cs1c/hw10/src[0m[27m[24m[J[01;31m[01;32m[01;33m [36m  src[00m [K[?1h=[?2004hddate[?1l>[?2004l
+]2;date]1;dateThu Mar 30 09:40:28 AM PDT 2023
+[1m[7m%[27m[1m[0m                                                                                                                   ]2;nate@archCrafty:~/Documents/school/cs1c/hw10/src]1;..cs1c/hw10/src[0m[27m[24m[J[01;31m[01;32m[01;33m [36m  src[00m [K[?1h=[?2004hlls -l[?1l>[?2004l
+]2;ls --color=tty -l]1;lstotal 16
+-rw-r--r-- 1 nate nate 7973 Mar 30 09:38 hw10.cpp
+-rw-r--r-- 1 nate nate    0 Mar 30 09:40 hw10.scr
+-rw-r--r-- 1 nate nate  167 Mar 30 08:50 Makefile
+-rw-r--r-- 1 nate nate 1140 Mar 29 20:42 rvalue.cpp
+[1m[7m%[27m[1m[0m                                                                                                                   ]2;nate@archCrafty:~/Documents/school/cs1c/hw10/src]1;..cs1c/hw10/src[0m[27m[24m[J[01;31m[01;32m[01;33m [36m  src[00m [K[?1h=[?2004hmmake all[?1l>[?2004l
+]2;make all]1;makeg++ -std=c++14 -Wall hw10.cpp -o hw10.o
+[1m[7m%[27m[1m[0m                                                                                                                   ]2;nate@archCrafty:~/Documents/school/cs1c/hw10/src]1;..cs1c/hw10/src[0m[27m[24m[J[01;31m[01;32m[01;33m [36m  src[00m [K[?1h=[?2004hvvalgrind
+[J[0mvalgrind            [Jvalgrind-di-server  [Jvalgrind-listener [J[A[0m[27m[24m[11Cvalgrind[K ./hw10.o[1m [0m[0m [?1l>[?2004l
+[J]2;valgrind ./hw10.o]1;valgrind==166259== Memcheck, a memory error detector
+==166259== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==166259== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==166259== Command: ./hw10.o
+==166259== 
+
+************************************** 
+*           Running HW10             * 
+*      Programmed by Nathan Milton   * 
+*      CS1C Tues/Thurs & 1:30pm      * 
+************************************** 
+
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C08BF9: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:230)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C08C13: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:230)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C038E6: __mpn_extract_double (dbl2mpn.c:56)
+==166259==    by 0x4C0933E: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:230)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C038EB: __mpn_extract_double (dbl2mpn.c:60)
+==166259==    by 0x4C0933E: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:230)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C0946C: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:805)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C0949B: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:808)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C094D4: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:818)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C09508: round_away (rounding-mode.h:52)
+==166259==    by 0x4C09508: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:825)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C09542: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:924)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+==166259== Conditional jump or move depends on uninitialised value(s)
+==166259==    at 0x4C0964D: __printf_fp_buffer_1.constprop.0.isra.0 (printf_fp.c:987)
+==166259==    by 0x4C0AC93: __printf_fp_l_buffer (printf_fp.c:1122)
+==166259==    by 0x4C11624: __printf_fp_spec (vfprintf-internal.c:266)
+==166259==    by 0x4C11624: __printf_buffer (vfprintf-internal.c:943)
+==166259==    by 0x4C326B4: __vsnprintf_internal (vsnprintf.c:96)
+==166259==    by 0x4C326B4: vsnprintf (vsnprintf.c:103)
+==166259==    by 0x49707F1: std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...) (c++locale.h:97)
+==166259==    by 0x49A4565: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const (locale_facets.tcc:1023)
+==166259==    by 0x49B552E: put (locale_facets.h:2463)
+==166259==    by 0x49B552E: std::ostream& std::ostream::_M_insert<double>(double) (ostream.tcc:73)
+==166259==    by 0x10950A: hw10::print(std::ostream&, hw10::vector&) (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259==    by 0x1096ED: main (in /home/nate/Documents/school/cs1c/hw10/src/hw10.o)
+==166259== 
+v  double values: 0 100.5 0 
+v2 double values (after copy, set): 25 100.5 0 
+
+v3 double values: 0 0 3.3 
+v4 double values: 0 0 4.4 0 
+v3 double values (after assignment): 0 0 4.4 0 
+
+fill up v6 with five doubles
+12  521818 1 8282 818 1 81 818 18 181 8 2 92 9
+v6 double values: 12 521818 1 8282 818 
+==166259== 
+==166259== HEAP SUMMARY:
+==166259==     in use at exit: 0 bytes in 0 blocks
+==166259==   total heap usage: 15 allocs, 15 frees, 75,293 bytes allocated
+==166259== 
+==166259== All heap blocks were freed -- no leaks are possible
+==166259== 
+==166259== Use --track-origins=yes to see where uninitialised values come from
+==166259== For lists of detected and suppressed errors, rerun with: -s
+==166259== ERROR SUMMARY: 165 errors from 10 contexts (suppressed: 0 from 0)
+[1m[7m%[27m[1m[0m                                                                                                                   ]2;nate@archCrafty:~/Documents/school/cs1c/hw10/src]1;..cs1c/hw10/src[0m[27m[24m[J[01;31m[01;32m[01;33m [36m  src[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-03-30 09:41:04-07:00 [COMMAND_EXIT_CODE="0"]
